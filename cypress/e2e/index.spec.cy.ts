@@ -9,15 +9,4 @@ describe('Calculator Tests', () => {
     cy.get('title').should('have.text', 'Calculator App');
   });
 
-  it('should display 2 when "1 + 1 = " is clicked', () => {
-
-    cy.get('.key-1').click();
-    cy.get('.key-add').click();
-    cy.get('.key-1').click();
-    cy.get('.key-equals').click();
-
-    cy.get('.calculator-display').should('have.text', '2');
-
-  });
-
 });

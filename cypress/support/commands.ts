@@ -38,14 +38,19 @@
 
 const COMMAND_DELAY = 500;
 
-['visit', 'click', 'trigger', 'type', 'clear', 'reload', 'select'].forEach((command) => {
-  Cypress.Commands.overwrite(command as unknown as keyof Cypress.Chainable<any>, (originalFn, ...args) => {
-    const origVal = originalFn(...args);
-
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(origVal);
-      }, COMMAND_DELAY);
+if (Cypress.env('slow')) {
+  ['visit', 'click', 'trigger', 'type', 'clear', 'reload', 'select'].forEach((command) => {
+    Cypress.Commands.overwrite(command as unknown as keyof Cypress.Chainable<any>, (originalFn, ...args) => {
+      
+      console.log("\n\nprocess.argv: ", process.argv);
+  
+      const origVal = originalFn(...args);
+  
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(origVal);
+        }, COMMAND_DELAY);
+      });
     });
   });
-});
+}

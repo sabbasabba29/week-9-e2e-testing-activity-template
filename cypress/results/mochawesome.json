@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-24T16:10:27.750Z",
-    "end": "2024-10-24T16:10:32.301Z",
-    "duration": 4551,
+    "start": "2024-10-24T23:39:07.974Z",
+    "end": "2024-10-24T23:39:12.591Z",
+    "duration": 4617,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e77eedf9-bfea-42f4-a48e-1b4bf1b6883c",
+      "uuid": "fb9af138-0a08-4b6c-bf71-a4d9d0aaace9",
       "title": "",
       "fullFile": "cypress\\e2e\\index.spec.cy.ts",
       "file": "cypress\\e2e\\index.spec.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "518f24d9-092b-42d1-a8a4-b511cdc730c2",
+          "uuid": "53a9162b-e1a0-4acb-acd3-e93e8cd35c4a",
           "title": "Calculator Tests",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get('title').should('have.text', 'Calculator App');",
               "err": {},
-              "uuid": "4787a2d8-7ad9-4946-9142-3397a30c1b22",
-              "parentUUID": "518f24d9-092b-42d1-a8a4-b511cdc730c2",
+              "uuid": "4acec8eb-4e9f-40a0-aa5e-65c83facc767",
+              "parentUUID": "53a9162b-e1a0-4acb-acd3-e93e8cd35c4a",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "should display 2 when \"1 + 1 = \" is clicked",
               "fullTitle": "Calculator Tests should display 2 when \"1 + 1 = \" is clicked",
               "timedOut": null,
-              "duration": 2528,
+              "duration": 2525,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.get('.key-1').click();\ncy.get('.key-add').click();\ncy.get('.key-1').click();\ncy.get('.key-equals').click();\ncy.get('.calculator-display').should('have.text', '2');",
               "err": {},
-              "uuid": "4e4b3b0f-6c69-45cf-8fe5-429bb0b902b7",
-              "parentUUID": "518f24d9-092b-42d1-a8a4-b511cdc730c2",
+              "uuid": "0b2e0af1-9692-49e9-b6de-2583167e434b",
+              "parentUUID": "53a9162b-e1a0-4acb-acd3-e93e8cd35c4a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4787a2d8-7ad9-4946-9142-3397a30c1b22",
-            "4e4b3b0f-6c69-45cf-8fe5-429bb0b902b7"
+            "4acec8eb-4e9f-40a0-aa5e-65c83facc767",
+            "0b2e0af1-9692-49e9-b6de-2583167e434b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3054,
+          "duration": 3051,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

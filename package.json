@@ -23,7 +23,11 @@
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headed",
-    "e2e": "node scripts/e2e.js",
+    "cypress:runHeadless": "cypress run",
+    "e2e": "cross-env SLOW=TRUE node scripts/e2e.js",
+    "e2e:headless": "cross-env SLOW=FALSE node scripts/e2e.js",
+    "poste2e": "node scripts/post-e2e.js",
+    "poste2e:Headless": "node scripts/post-e2e.js",
     "zip": "node scripts/zip.js"
   },
   "eslintConfig": {
@@ -49,6 +53,7 @@
     "cross-env": "^7.0.3",
     "cypress": "^13.15.0",
     "mochawesome": "^7.1.3",
-    "tree-kill": "^1.2.2"
+    "tree-kill": "^1.2.2",
+    "zip-a-folder": "^3.1.7"
   }
 }

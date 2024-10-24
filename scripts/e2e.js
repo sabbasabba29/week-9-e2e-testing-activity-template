@@ -7,12 +7,13 @@
 
   let devServerPid;
   let testScriptPid;
+  const cypressCommand = process.env.SLOW === 'TRUE' ? 'cypress:run' : 'cypress:runHeadless';
 
   function runTests() {
     return new Promise((resolve, reject) => {
       const options = { detached: false, cwd: process.cwd(), shell: true, stdio: 'pipe' };
 
-      const child = spawn('npm', ['run', 'cypress:run'], options);
+      const child = spawn('npm', ['run', cypressCommand], options);
       testScriptPid = child.pid;
 
       child.stdout.on('data', (data) => {

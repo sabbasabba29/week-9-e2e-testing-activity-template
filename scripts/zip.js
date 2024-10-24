@@ -7,7 +7,7 @@
   const zipAFolder = require('zip-a-folder');
 
   const outputPath = path.resolve(__dirname, '..', 'submission.zip');
-  const inputPath = path.resolve(__dirname, '..', 'src');
+  const inputPath = path.resolve(__dirname, '..', 'cypress', 'e2e');
 
   if(fs.existsSync(outputPath)) {
     fs.rmSync(outputPath, { force: true });
