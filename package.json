@@ -27,7 +27,7 @@
     "e2e": "cross-env SLOW=TRUE node scripts/e2e.js",
     "e2e:headless": "cross-env SLOW=FALSE node scripts/e2e.js",
     "poste2e": "node scripts/post-e2e.js",
-    "poste2e:Headless": "node scripts/post-e2e.js",
+    "poste2e:headless": "node scripts/post-e2e.js",
     "zip": "node scripts/zip.js"
   },
   "eslintConfig": {
