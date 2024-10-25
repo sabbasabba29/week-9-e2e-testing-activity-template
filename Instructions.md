@@ -15,7 +15,7 @@ First, we need to install all the necessary dependencies.
 To run the end-to-end tests, run the following command:
  - Run `npm run e2e`
 This should start a dev server, open an electron app, and display the calculator we have implemented using React.
-The browser should then close automatically.
+The browser should then close automatically. This will only be visible for a moment before the window closes.
 
 It should look something like this:
 ![e2e window](img/e2eWindow.png)
@@ -97,6 +97,8 @@ We can select html elements using the classnames shown below:
   <CalculatorKey className="key-equals" label={ActionKeys.EQUALS} onPress={actionKeyPressHandler} />
 </div>
 ```
+
+*Note:* The sign flip and sqrt features have not been implemented so *only* test the basic four operators (+, -, *, /).
 
 Thus, to select the key "1", we can invoke `cy.get('.key-1')`.
 Let us start writing our test below the existing test:
