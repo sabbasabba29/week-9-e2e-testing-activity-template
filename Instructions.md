@@ -1,4 +1,4 @@
-# Week 8 End-To-End Testing Activity
+# Week 9 End-To-End Testing Activity
 
 In this activity, we will write some end-to-end tests for our Calculator App using Cypress.
 By now, we are familiar with Jest, which is a JavaScript testing framework.
